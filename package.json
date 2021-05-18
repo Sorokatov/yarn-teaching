@@ -1,0 +1,11 @@
+{
+  "name": "yarn-course",
+  "version": "1.0.0",
+  "description": "yarn course test",
+  "main": "index.js",
+  "author": "Maksym Sorokatov",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^3.15.0"
+  }
+}
