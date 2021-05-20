@@ -3,9 +3,32 @@
   "version": "1.0.0",
   "description": "yarn course test",
   "main": "index.js",
+  "scripts": {
+    "test": "cross-env BABEL_ENV=test ava",
+    "build": "cross-env BABEL_ENV=build rollup -c"
+  },
+  "ava": {
+    "files": [
+      "test/*.js"
+    ],
+    "soruce": [
+      "src/*.{js}",
+      "!dist/**/*"
+    ],
+    "tap": true,
+    "require": "babel-register",
+    "babel": "inherit"
+  },
   "author": "Maksym Sorokatov",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^3.15.0"
+    "@ava/babel-preset-stage-4": "^1.1.0",
+    "ava": "^0.25.0",
+    "babel-core": "6.24.1",
+    "babel-plugin-external-helpers": "6.22.0",
+    "babel-preset-env": "1.4.0",
+    "cross-env": "^7.0.3",
+    "rollup-plugin-babel": "2.7.1",
+    "rollup-watch": "3.2.2"
   }
 }
