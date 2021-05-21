@@ -4,7 +4,8 @@
   "description": "yarn course test",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env BABEL_ENV=test ava",
+    "test": "BABEL_ENV=test ava",
+    "test:local": "cross-env BABEL_ENV=test ava",
     "build": "cross-env BABEL_ENV=build rollup -c"
   },
   "ava": {
