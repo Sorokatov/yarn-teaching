@@ -42,7 +42,7 @@ jobs:
       - store_artifacts:
           path: test-results/ava/results.xml
           destination: test-results/ava/
-      - store_artifcats:
+      - store_artifacts:
           path: coverage-report.lcov
           destination: reports
       - store_test_result:
